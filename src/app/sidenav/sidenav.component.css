@@ -1,0 +1,15 @@
+.sidenav-container {
+    height: 100%;
+    border-right: 1px black solid;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
