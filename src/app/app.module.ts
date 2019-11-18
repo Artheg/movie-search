@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarModule } from './search-bar/search-bar.module';
 import { SidenavModule } from './sidenav/sidenav.module';
+import { MatButtonModule } from '@angular/material';
+import { ImdbViewModule } from './imdb-view/imdb-view.module';
+import { SavedViewComponent } from './saved-view/saved-view.component';
+import { SavedViewModule } from './saved-view/saved-view.module';
 
 @NgModule({
    declarations: [
@@ -16,7 +20,10 @@ import { SidenavModule } from './sidenav/sidenav.module';
       AppRoutingModule,
       NoopAnimationsModule,
       SearchBarModule,
-      SidenavModule
+      SidenavModule,
+      MatButtonModule,
+      ImdbViewModule,
+      SavedViewModule
    ],
    providers: [],
    bootstrap: [

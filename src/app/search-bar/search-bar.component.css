@@ -3,5 +3,14 @@
  }
 
  mat-toolbar {
-     background: black;
- }
+     background: #999;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: row;
+}
