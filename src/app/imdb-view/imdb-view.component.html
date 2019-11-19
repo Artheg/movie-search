@@ -1,3 +1,6 @@
-<p>
-  imdb-view works!
-</p>
+<div class="movie-grid">
+  <app-movie-card
+    *ngFor="let item of model.getData()"
+    [data]="item"
+  ></app-movie-card>
+</div>

@@ -2,7 +2,7 @@
     <mat-form-field>
       <div class="input-field">
             <mat-icon>search</mat-icon>
-          <input matInput />
+          <input matInput (keyup)="this.onInputChange($event)" />
         </div>
     </mat-form-field>
 </mat-toolbar>

@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material';
 import { ImdbViewModule } from './imdb-view/imdb-view.module';
 import { SavedViewComponent } from './saved-view/saved-view.component';
 import { SavedViewModule } from './saved-view/saved-view.module';
+import { Model } from './models/model';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -23,9 +25,12 @@ import { SavedViewModule } from './saved-view/saved-view.module';
       SidenavModule,
       MatButtonModule,
       ImdbViewModule,
-      SavedViewModule
+      SavedViewModule,
+      HttpClientModule
    ],
-   providers: [],
+   providers: [
+      Model
+   ],
    bootstrap: [
       AppComponent
    ]

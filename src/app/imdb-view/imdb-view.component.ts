@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from '../models/model';
 
 @Component({
   selector: 'app-imdb-view',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImdbViewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public model: Model) { }
 
   ngOnInit() {
   }
