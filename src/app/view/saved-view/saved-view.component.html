@@ -7,3 +7,9 @@
   ></app-movie-card>
 
 </div>
+<div class="no-data-message" *ngIf="data.length == 0">
+    <p>
+      Go to IMDB tab, search for movies and add them to your collection.
+    </p>
+  </div>
+  

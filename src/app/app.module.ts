@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule, BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBarModule } from './view/search-bar/search-bar.module';
 import { SidenavModule } from './view/sidenav/sidenav.module';
 import { MatButtonModule } from '@angular/material';
@@ -24,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
       SidenavModule,
       ImdbViewModule,
       SavedViewModule,
-      HttpClientModule
+      HttpClientModule,
+      BrowserAnimationsModule
    ],
    providers: [
       Model

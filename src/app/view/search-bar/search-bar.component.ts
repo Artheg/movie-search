@@ -23,12 +23,13 @@ export class SearchBarComponent implements OnInit {
     console.log(value);
     this.model.setIsLoading(true);
     this.omdbService.search(value).subscribe(data => {
+      this.model.setIsLoading(false);
       if (data['Error']) {
+        alert(data['Error']);
         return;
       }
       this.model.setSearchData(data['Search'] as MovieData[]);
       console.log('data set', this.model.getSearchData());
-      this.model.setIsLoading(false);
     });
   };
 }

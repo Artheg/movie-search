@@ -12,6 +12,7 @@ mat-card-header {
 }
 
 #poster {
+    max-width: 135px;
     max-height: 200px;
 }
 

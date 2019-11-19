@@ -1,3 +1,5 @@
+<div id="imdb-view-container">
+<app-search-bar></app-search-bar>
 <div class="movie-grid">
   <app-movie-card
     *ngFor="let item of data"
@@ -5,4 +7,10 @@
     [isSaved]="this.checkIfSaved(item)"
     (buttonClickEvent)="this.onButtonClick(item)"
   ></app-movie-card>
+</div>
+<div class="no-data-message" *ngIf="data.length == 0">
+  <p>
+    Type the name of the movie and press Enter or click Search button.
+  </p>
+</div>
 </div>
