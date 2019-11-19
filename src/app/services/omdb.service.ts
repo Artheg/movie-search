@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SearchBarModule } from '../view/search-bar/search-bar.module';
+import { SearchBarModule } from '../view/components/search-bar/search-bar.module';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({

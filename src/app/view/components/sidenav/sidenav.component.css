@@ -6,15 +6,11 @@
     flex-direction: column;
 }
 
-.button {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+.button-container {
     width: 100%;
-    align-items: center;
     border-bottom: 1px #888 solid;
 }
 
-.button button {
+.button {
     width: 100%;
 }

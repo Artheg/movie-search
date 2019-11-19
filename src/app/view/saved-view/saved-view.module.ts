@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SavedViewComponent } from './saved-view.component';
 import { Model } from '../../models/model';
-import { MovieCardModule } from '../movie-card/movie-card.module';
+import { MovieCardModule } from '../components/movie-card/movie-card.module';
 
 @NgModule({
   imports: [

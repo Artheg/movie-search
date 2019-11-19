@@ -9,8 +9,8 @@ import {
   MatInputModule,
   MatProgressBarModule
 } from '@angular/material';
-import { Model } from '../../models/model';
-import { OmdbService } from '../../services/omdb.service';
+import { Model } from '../../../models/model';
+import { OmdbService } from '../../../services/omdb.service';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

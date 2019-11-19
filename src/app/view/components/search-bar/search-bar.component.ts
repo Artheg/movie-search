@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from '../../models/model';
-import { OmdbService } from '../../services/omdb.service';
-import { MovieData } from '../../models/movie-data';
+import { Model } from '../../../models/model';
+import { OmdbService } from '../../../services/omdb.service';
+import { MovieData } from '../../../models/movie-data';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -20,6 +20,9 @@ export class SearchBarComponent implements OnInit {
   }
 
   performSearch = (value: string) => {
+    if (!value.length) {
+      return;
+    }
     const trimmedValue = value.trim();
     this.model.setIsLoading(true);
     this.omdbService.search(trimmedValue).subscribe(data => {
