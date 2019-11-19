@@ -74,6 +74,7 @@
     "trailing-comma": false,
     "semicolon": false,
     "no-string-literal": false,
+    "no-inferrable-types": false,
     "interface-over-type-literal": false,
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,

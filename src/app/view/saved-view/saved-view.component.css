@@ -3,8 +3,7 @@ app-movie-card {
 }
 
 .movie-grid {
-  --auto-grid-min-size: 16rem;
-
+  --auto-grid-min-size: 366px;
   display: grid;
   grid-template-columns: repeat(
     auto-fill,

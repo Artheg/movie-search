@@ -1,18 +1,12 @@
 #imdb-view-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-app-search-bar {
-  flex: 0 0 auto;
-}
-
 .movie-grid {
-    --auto-grid-min-size: 16rem;
-
+    --auto-grid-min-size: 366px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
     grid-gap: 1rem;

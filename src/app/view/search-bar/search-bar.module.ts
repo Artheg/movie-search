@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from './search-bar.component';
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatProgressBarModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatIconModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatAutocompleteModule,
+  MatProgressBarModule
+} from '@angular/material';
 import { Model } from '../../models/model';
 import { OmdbService } from '../../services/omdb.service';
 import { FormsModule } from '@angular/forms';
@@ -22,4 +30,4 @@ import { FormsModule } from '@angular/forms';
   exports: [SearchBarComponent],
   providers: [Model, OmdbService]
 })
-export class SearchBarModule { }
+export class SearchBarModule {}

@@ -18,16 +18,11 @@ export class MovieCardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  constructor() {
-    console.log('WTF');
-  }
-
   goToLink = () => {
     window.open(`https://imdb.com/title/${this.data.imdbID}`);
   };
 
   onButtonClick = () => {
-    console.log('on button click');
     this.buttonClickEvent.emit(this.data);
   };
 }
