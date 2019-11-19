@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatMenuModule,
     MatIconModule,
-    MatListModule,
     MatButtonModule,
     RouterModule
   ],

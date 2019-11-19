@@ -1,19 +1,19 @@
 <mat-card>
   <mat-card-header>
     <h4>
-      {{ data.Title }}
+      {{ data.title }}
     </h4>
-    <span> [{{ data.Year }}] </span>
+    <span> [{{ data.year }}] </span>
   </mat-card-header>
   <mat-card-content>
     <div class="content-left">
-      <img id="poster" alt="Picture not available" src="{{ data.Poster }}" loading="lazy" />
+      <img id="poster" alt="Picture not available" src="{{ data.posterURL }}" loading="lazy" />
     </div>
     <div class="content-right">
       <a class="movie-link" (click)="goToLink()">
         <img id="imdb-logo" src="assets/imdb.png" loading="lazy" />
         <p>
-          {{ data.Type }}
+          {{ data.type }}
         </p>
       </a>
     </div>

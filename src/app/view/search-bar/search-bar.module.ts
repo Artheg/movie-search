@@ -7,7 +7,6 @@ import {
   MatIconModule,
   MatFormFieldModule,
   MatInputModule,
-  MatAutocompleteModule,
   MatProgressBarModule
 } from '@angular/material';
 import { Model } from '../../models/model';
@@ -23,7 +22,6 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatFormFieldModule,
     FormsModule,
-    MatAutocompleteModule,
     MatProgressBarModule
   ],
   declarations: [SearchBarComponent],

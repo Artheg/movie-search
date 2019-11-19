@@ -28,7 +28,7 @@ export class Model {
     for (let i = 0, len = localStorage.length; i < len; ++i) {
       const key = localStorage.key(i);
       const rawData = localStorage.getItem(key);
-      result[key] = JSON.parse(rawData);
+      result[key] = new MovieData(JSON.parse(rawData));
     }
     return result;
   }
@@ -49,8 +49,11 @@ export class Model {
     localStorage.removeItem(data.imdbID);
   }
 
-  public setSearchData(value: MovieData[]) {
-    this.searchData = value;
+  public setSearchData(value: object[]) {
+    this.searchData = [];
+    for (const rawData of value) {
+      this.searchData.push(new MovieData(rawData));
+    }
   }
 
   public getSavedDataArray(): MovieData[] {
