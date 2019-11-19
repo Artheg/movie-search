@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from '../models/model';
-import { OmdbService } from '../services/omdb.service';
-import { MovieData } from '../models/movie-data';
+import { Model } from '../../models/model';
+import { OmdbService } from '../../services/omdb.service';
+import { MovieData } from '../../models/movie-data';
 
 @Component({
   selector: 'app-search-bar',
@@ -20,8 +20,8 @@ export class SearchBarComponent implements OnInit {
      if (data['Error']) {
        return;
      }
-     this.model.setData(data['Search'] as MovieData[]);
-     console.log("data set", this.model.getData())
+     this.model.setSearchData(data['Search'] as MovieData[]);
+     console.log("data set", this.model.getSearchData())
     })
   };
 }

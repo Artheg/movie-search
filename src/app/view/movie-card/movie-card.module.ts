@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MovieCardComponent } from './movie-card.component';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatIconModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule
   ],
   declarations: [MovieCardComponent],
   exports: [MovieCardComponent]

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from '../models/model';
+import { Model } from '../../models/model';
 
 @Component({
   selector: 'app-imdb-view',
@@ -13,4 +13,7 @@ export class ImdbViewComponent implements OnInit {
   ngOnInit() {
   }
 
+  public get data() {
+    return this.model.getSearchData();
+  }
 }

@@ -1,7 +1,7 @@
 .sidenav-container {
     height: 100%;
     border-right: 1px #888 solid;
-    width: 150px;
+    width: 120px;
     display: flex;
     flex-direction: column;
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImdbViewComponent } from './imdb-view.component';
-import { Model } from '../models/model';
+import { Model } from '../../models/model';
 import { MovieCardModule } from '../movie-card/movie-card.module';
 
 @NgModule({

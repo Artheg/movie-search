@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from '../../models/model';
 
 @Component({
   selector: 'app-saved-view',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./saved-view.component.css']
 })
 export class SavedViewComponent implements OnInit {
+  constructor(private model: Model) {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  public get data() {
+    return this.model.getSavedData();
   }
-
 }

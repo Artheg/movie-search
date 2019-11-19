@@ -7,15 +7,22 @@
   </mat-card-header>
   <mat-card-content>
     <div class="content-left">
-      <img id="poster" src="{{ data.Poster }}" />
+      <img id="poster" src="{{ data.Poster }}" loading="lazy" />
     </div>
     <div class="content-right">
       <a class="movie-link" (click)="goToLink()">
-        <img id="imdb-logo" src="assets/imdb.png" />
+        <img id="imdb-logo" src="assets/imdb.png" loading="lazy" />
         <p>
           {{ data.Type }}
         </p>
       </a>
     </div>
   </mat-card-content>
+  <mat-card-footer>
+    <button id="footer-btn" mat-flat-button>
+      <mat-icon>
+        event_available
+      </mat-icon>
+    </button>
+  </mat-card-footer>
 </mat-card>

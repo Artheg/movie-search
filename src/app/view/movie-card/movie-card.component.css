@@ -25,12 +25,16 @@ mat-card-content {
     align-items: center;
 }
 
+#footer-btn {
+    width: 100%;
+}
 .content-left {
     max-height: 200px;
 }
 
 .content-right {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
