@@ -1,8 +1,21 @@
 <mat-toolbar>
-    <mat-form-field>
-      <div class="input-field">
-            <mat-icon>search</mat-icon>
-          <input matInput (keyup)="this.onInputChange($event)" />
-        </div>
-    </mat-form-field>
+  <mat-form-field>
+    <div class="input-field">
+      <button mat-button id="search-btn" (click)="performSearch(searchInput.value)">
+        <mat-icon>search</mat-icon>
+      </button>
+      <input
+        #searchInput
+        matInput
+        [autocomplete]="autoComplete"
+        (keyup.enter)="performSearch(searchInput.value)"
+      />
+      <mat-autocomplete #autoComplete>
+        <mat-option [value]="'test'">
+          <p>TESTING</p>
+        </mat-option>
+      </mat-autocomplete>
+    </div>
+    <mat-progress-bar *ngIf="isLoading" id="progress-bar" mode="indeterminate"></mat-progress-bar>
+  </mat-form-field>
 </mat-toolbar>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MovieData } from '../../models/movie-data';
 
 @Component({
@@ -9,13 +9,25 @@ import { MovieData } from '../../models/movie-data';
 export class MovieCardComponent implements OnInit {
   @Input()
   data: MovieData;
-  
-  ngOnInit(): void {
-  }
+
+  @Input()
+  isSaved: boolean;
+
+  @Output()
+  buttonClickEvent: EventEmitter<MovieData> = new EventEmitter<MovieData>();
+
+  ngOnInit(): void {}
+
   constructor() {
+    console.log('WTF');
   }
 
   goToLink = () => {
-    window.open(`https://imdb.com/title/${this.data.imdbID}`)
-  }
+    window.open(`https://imdb.com/title/${this.data.imdbID}`);
+  };
+
+  onButtonClick = () => {
+    console.log('on button click');
+    this.buttonClickEvent.emit(this.data);
+  };
 }

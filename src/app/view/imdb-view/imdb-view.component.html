@@ -2,5 +2,7 @@
   <app-movie-card
     *ngFor="let item of data"
     [data]="item"
+    [isSaved]="this.checkIfSaved(item)"
+    (buttonClickEvent)="this.onButtonClick(item)"
   ></app-movie-card>
 </div>

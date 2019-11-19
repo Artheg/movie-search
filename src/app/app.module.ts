@@ -20,10 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      NoopAnimationsModule,
       SearchBarModule,
       SidenavModule,
-      MatButtonModule,
       ImdbViewModule,
       SavedViewModule,
       HttpClientModule

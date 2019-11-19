@@ -7,7 +7,7 @@
   </mat-card-header>
   <mat-card-content>
     <div class="content-left">
-      <img id="poster" src="{{ data.Poster }}" loading="lazy" />
+      <img id="poster" alt="Picture not available" src="{{ data.Poster }}" loading="lazy" />
     </div>
     <div class="content-right">
       <a class="movie-link" (click)="goToLink()">
@@ -19,10 +19,15 @@
     </div>
   </mat-card-content>
   <mat-card-footer>
-    <button id="footer-btn" mat-flat-button>
-      <mat-icon>
+    <button (click)="onButtonClick()" type="button" id="footer-btn">
+      <mat-icon *ngIf="!isSaved; else deleteIcon">
         event_available
       </mat-icon>
+      <ng-template #deleteIcon>
+        <mat-icon color="warn">
+          delete_forever
+        </mat-icon>
+      </ng-template>
     </button>
   </mat-card-footer>
 </mat-card>

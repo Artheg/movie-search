@@ -2,6 +2,10 @@ input {
   width: 100%;
 }
 
+#search-btn {
+  margin-right: 25px;
+}
+
 mat-toolbar {
   border-bottom: 1px solid #444;
 }

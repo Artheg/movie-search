@@ -1,5 +1,5 @@
-mat-card {
-    min-height: 312px;
+mat-card-content {
+    min-height: 200px;
 }
 
 mat-card-header {
@@ -8,6 +8,7 @@ mat-card-header {
     justify-content: space-around;
     align-items: center;
     padding-bottom: 25px;
+    min-height: 125px;
 }
 
 #poster {

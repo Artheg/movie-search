@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Model } from '../../models/model';
 import { OmdbService } from '../../services/omdb.service';
 import { MovieData } from '../../models/movie-data';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,19 +10,25 @@ import { MovieData } from '../../models/movie-data';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent implements OnInit {
-  public inputValue: string;
+  public formControl: FormControl = new FormControl();
   constructor(private omdbService: OmdbService, private model: Model) {}
 
   ngOnInit() {}
 
-  onInputChange = (e: any) => {
-    console.log(e.target.value);
-    this.omdbService.search(e.target.value).subscribe((data) => {
-     if (data['Error']) {
-       return;
-     }
-     this.model.setSearchData(data['Search'] as MovieData[]);
-     console.log("data set", this.model.getSearchData())
-    })
+  public get isLoading(): boolean {
+    return this.model.getIsLoading();
+  }
+
+  performSearch = (value: string) => {
+    console.log(value);
+    this.model.setIsLoading(true);
+    this.omdbService.search(value).subscribe(data => {
+      if (data['Error']) {
+        return;
+      }
+      this.model.setSearchData(data['Search'] as MovieData[]);
+      console.log('data set', this.model.getSearchData());
+      this.model.setIsLoading(false);
+    });
   };
 }

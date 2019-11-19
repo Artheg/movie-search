@@ -7,8 +7,7 @@ import { MatCardModule, MatIconModule, MatButtonModule } from '@angular/material
   imports: [
     CommonModule,
     MatCardModule,
-    MatIconModule,
-    MatButtonModule
+    MatIconModule
   ],
   declarations: [MovieCardComponent],
   exports: [MovieCardComponent]

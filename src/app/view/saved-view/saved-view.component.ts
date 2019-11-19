@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Model } from '../../models/model';
+import { MovieData } from '../../models/movie-data';
 
 @Component({
   selector: 'app-saved-view',
@@ -12,6 +13,14 @@ export class SavedViewComponent implements OnInit {
   ngOnInit() {}
 
   public get data() {
-    return this.model.getSavedData();
+    return this.model.getSavedDataArray();
   }
+
+  public checkIfSaved = (data: MovieData) => {
+    return this.model.checkIfDataSaved(data);
+  };
+
+  public onButtonClick = (data: MovieData) => {
+    this.model.removeFromLocalStorage(data);
+  };
 }
